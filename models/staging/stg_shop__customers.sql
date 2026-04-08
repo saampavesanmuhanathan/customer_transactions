@@ -12,6 +12,7 @@ de_duplication AS (
         gender,
         age,
         country,
+        signup_date,
         ROW_NUMBER()OVER(PARTITION BY id) AS rn
     FROM customers_base
     )
@@ -23,7 +24,8 @@ SELECT
     email,
     gender,
     age,
-    country
+    country,
+    signup_date
 FROM de_duplication
 WHERE rn = 1
     
