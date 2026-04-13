@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: customer_transactions
+    description: "Table shouwing customer transactions segmented by age brackets, recency, frequency and monetary value "
+    columns:
+      - name: customer_id
+        data_type: integer
+        description: "{{ doc('customer_id') }}"
+
+      - name: gender
+        data_type: character varying
+        description: "{{ doc('gender') }}"
+
+      - name: age_bracket
+        data_type: text
+        description: "{{ doc('age_bracket') }}"
+
+      - name: country
+        data_type: character varying
+        description: "{{ doc('country') }}"
+
+      - name: account_age_years
+        data_type: numeric
+        description: "{{ doc('account_age_years') }}"
+
+      - name: recency_segment
+        data_type: text
+        description: "{{ doc('recency_segment') }}"
+
+      - name: frequency_segment
+        data_type: text
+        description: "{{ doc('frequency_segment') }}"
+
+      - name: value_segment
+        data_type: text
+        description: "{{ doc('value_segment') }}"
+
+      - name: avg_value_of_orders
+        data_type: numeric
+        description: "{{ doc('avg_value_of_orders') }}"
