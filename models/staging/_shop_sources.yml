@@ -9,15 +9,21 @@ sources:
             data_tests:
               - not_null:
                   severity: warn
+              - unique:
+                  severity: warn
       - name: products
         columns:
           - name: id
             data_tests:
               - not_null:
                   severity: warn
+              - unique:
+                  severity: warn
       - name: transactions
         columns:
           - name: id
             data_tests:
               - not_null:
+                  severity: warn
+              - unique:
                   severity: warn
