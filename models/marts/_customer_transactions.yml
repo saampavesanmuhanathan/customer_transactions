@@ -7,6 +7,9 @@ models:
       - name: customer_id
         data_type: integer
         description: "{{ doc('customer_id') }}"
+        data_tests:
+          - unique
+          - not_null
 
       - name: gender
         data_type: character varying
